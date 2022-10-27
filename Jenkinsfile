@@ -18,7 +18,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh 'cp **/* /var/lib/tomcat9/webapps/myapp/'
+                sh 'cp index.html /var/lib/tomcat9/webapps/myapp/'
             }
         }
         stage('Testing-branch') {
@@ -26,7 +26,7 @@ pipeline {
                 branch 'branch1'
             }
             steps {
-                sh 'cp **/* /var/lib/www/'
+                sh 'cp index.html /var/www/html/'
             }
         }
     }
